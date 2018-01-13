@@ -31,5 +31,24 @@ public class MainActivityTest {
         onView(withId(R.id.btnAdd)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("4.0 plus 4.0 gives value 8.0")));
        }
+    @Test
+    public void testMULTIPLY(){
+        //fail("Not implemented yet!");
+
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("5.0"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("5.0"));
+        onView(withId(R.id.btnMult)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("5.0 multiplied by 5.0 gives value 25.0")));
+    }
+    @Test
+    public void testDIVIDE(){
+        //fail("Not implemented yet!");
+
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("20.0"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("5.0"));
+        onView(withId(R.id.btnDiv)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("20.0 divided by 5.0 gives value  4.0")));
+    }
+
 }
 
