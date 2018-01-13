@@ -47,7 +47,7 @@ public class MainActivityTest {
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText("20.0"));
         onView(withId(R.id.etNum2)).perform(click()).perform(typeText("5.0"));
         onView(withId(R.id.btnDiv)).perform(click());
-        onView(withId(R.id.tvResult)).check(matches(withText("20.0 divided by 5.0 gives value  4.0")));
+        onView(withId(R.id.tvResult)).check(matches(withText("20.0 divided by 5.0 gives value 4.0")));
     }
 
 }
