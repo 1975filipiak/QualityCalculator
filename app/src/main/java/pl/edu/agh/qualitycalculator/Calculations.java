@@ -15,6 +15,14 @@ public class Calculations {
             throw new Exception("Unknown operation");
         }
     }
+    public float calculate2(Operation op, float operand1, float operand2, float operand3) throws Exception {
+        if (op.equals(Operation.AVERAGE)) {
+            return average(operand1, operand2, operand3);
+        } else {
+            throw new Exception("Unknown operation");
+        }
+
+    }
 
     private float sum(float operand1, float operand2) {
         return operand1 + operand2;
@@ -32,4 +40,5 @@ public class Calculations {
         return operand1 / operand2;
     }
 
+    private float average(float operand1, float operand2, float operand3) { return (operand1+operand2+operand3)/3; }
 }

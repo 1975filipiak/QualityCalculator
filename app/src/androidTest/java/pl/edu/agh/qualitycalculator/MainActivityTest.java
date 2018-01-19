@@ -50,6 +50,57 @@ public class MainActivityTest {
         onView(withId(R.id.tvResult)).check(matches(withText("20.0 divided by 5.0 gives value 4.0")));
         // komentarz
     }
+    @Test
+    public void testSubstract(){
+        //fail("Not implemented yet!");
 
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("20.0"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("5.0"));
+        onView(withId(R.id.btnSub)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("20.0 minus 5.0 gives value 15.0")));
+        // komentarz
+    }
+    @Test
+    public void testAverage(){
+        //fail("Not implemented yet!");
+
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("20.0"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("5.0"));
+        onView(withId(R.id.etNum3)).perform(click()).perform(typeText("5.0"));
+        onView(withId(R.id.btnAverage)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("20.0 average by 5.0 average by 5.0 gives value 10.0")));
+        // komentarz
+    }
+    @Test
+    public void testError1(){
+        //fail("Not implemented yet!");
+
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("20.0"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("0.0"));
+        onView(withId(R.id.btnDiv)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("20.0 divided by 0.0 gives value Infinity")));
+        // komentarz
+    }
+    @Test
+    public void testError2(){
+        //fail("Not implemented yet!");
+
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText(""));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText(""));
+        onView(withId(R.id.btnAdd)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
+        // komentarz
+    }
+    @Test
+    public void testError3(){
+        //fail("Not implemented yet!");
+
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText(""));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText(""));
+        onView(withId(R.id.etNum3)).perform(click()).perform(typeText(""));
+        onView(withId(R.id.btnAverage)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
+        // komentarz
+    }
 }
 
